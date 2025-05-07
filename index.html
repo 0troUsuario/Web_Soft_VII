@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  <!-- centrea la navbar -->
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+
+  <style>
+    .centrar-titulo {
+      display: flex;
+      justify-content: center;
+    }
+    .centrar-subtitulo {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+
+  <style>
+    .contenedor-prueba {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+
+  <style>
+    .prueba-contenedor-uno {
+      background-color: aqua;
+      width: 250px;
+      padding: 200px;
+    }
+    .prueba-contenedor-dos {
+      background-color: blueviolet;
+      width: 200px;
+      padding: 200px;
+    }
+  </style>
+
+  <style>
+    .texto-contenedor {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+
+  <style>
+    .Texto-articulo-destacado {
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+
+  <style>
+    .destacada {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .imagen-destacada {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (max-width: 768px) {
+      .cuadro-grande {
+        width: 90vw;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <!--Logo-->
+    <img src="img/Dall-e_PNG.png" alt="Logo flotante" id="floating-logo">
+
+    <style>
+      #floating-logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  height: 150px;        /* Puedes ajustar el tamaño aquí */
+  width: auto;         /* Mantiene proporción */
+  opacity: 0;          /* Comienza invisible */
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* Para que no interfiera con clics */
+  z-index: 1000;       /* Asegura que esté encima de otros elementos */
+}
+
+
+    </style>
+<!-- fin logo-->
+
+  <h1 class="centrar-titulo">Dall-E</h1>
+  <h2 class="centrar-subtitulo">Todo lo que puedas encontrar, en un solo lugar</h2>
+  <br />
+  <div class="contenedor-linea">
+    <div class="linea-horizontal"></div>
+  </div>
+
+
+  <nav class="navbar">
+    <ul class="menunavbar">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="publicar.html">Publicar</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="enlace.html">Nosotros</a></li>
+    </ul>
+  </nav>
+
+  <div class="contenedor-linea">
+    <div class="linea-horizontal"></div>
+  </div>
+
+  <div class="seccion-cuadro-grande">
+    <div class="cuadro-grande">
+      <figure class="destacada">
+        <img src="img/noche.jpg" alt="Noche" class="imagen-destacada" />
+      </figure>
+      <div class="rectangulo-superpuesto">
+        <span>Artículo destacado</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="contenedor-linea">
+    <div class="linea-horizontal"></div>
+  </div>
+
+  <div class="contenedor-principal">
+    <div class="cuadro">
+      <figure>
+        <img src="img/la-banana.jpeg" alt="la-banana" class="imagen-el-david" />
+      </figure>
+      <div class="info-producto">
+        <h2>La Banana</h2>
+        <p class="price">25$</p>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-tres.html';">Ver más</button>
+      </div>
+    </div>
+
+    <div class="cuadro">
+      <figure>
+        <img src="img/Pensador.jpeg" alt="Pensador" class="imagen-el-david" />
+      </figure>
+      <div class="info-producto">
+        <h2>El Pensador</h2>
+        <p class="price">100$</p>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-cuatro.html';">Ver más</button>
+      </div>
+    </div>
+
+    <div class="cuadro">
+      <figure>
+        <img src="img/busto.jpeg" alt="busto-El-David" class="imagen-el-david" />
+      </figure>
+      <div class="info-producto">
+        <h2>El David (Estatua)</h2>
+        <p class="price">550$</p>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba.html';">Ver más</button>
+      </div>
+    </div>
+
+    <div class="cuadro">
+      <figure>
+        <img src="img/noche-estrellada.jpg" alt="busto-El-David" class="imagen-el-david" />
+      </figure>
+      <div class="info-producto">
+        <h2>Noche Estrellada</h2>
+        <p class="price">80$</p>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-dos.html';">Ver más</button>
+      </div>
+    </div>
+
+    <div class="cuadro">
+      <figure>
+        <img src="img/vigilantes.jpg" alt="vigilantes" class="imagen-el-david" />
+      </figure>
+      <div class="info-producto">
+        <h2>Vigilantes</h2>
+        <p class="price">10$</p>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-cinco.html';">Ver más</button>
+      </div>
+    </div>
+
+    <div class="cuadro">
+      <figure>
+        <img src="img/valle-de-los-lamentos.jpg" alt="vigilantes" class="imagen-el-david" />
+      </figure>
+      <div class="info-producto">
+        <h2>Valle de los Lamentos</h2>
+        <p class="price">15$</p>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-seis.html';">Ver más</button>
+      </div>
+    </div>
+
+    <div class="cuadro">
+      <figure>
+        <img src="img/guernica.jpg" alt="guernica" class="imagen-el-david" />
+      </figure>
+      <div class="info-producto">
+        <h2>Guernica</h2>
+        <p class="price">38$</p>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-siete.html';">Ver más</button>
+      </div>
+    </div>
+
+    <div class="cuadro">
+      <figure>
+        <img src="img/paisaje-lienzo.jpg" alt="paisajeBN" class="imagen-el-david" />
+      </figure>
+      <div class="info-producto">
+        <h2>El Mirar</h2>
+        <p class="price">18$</p>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-ocho.html';">Ver más</button>
+      </div>
+    </div>
+  </div>
+
+  <br /><br />
+  <div class="contenedor-linea">
+    <div class="linea-horizontal"></div>
+  </div>
+
+  <div id="contenedor-perder">
+    <h2>No te pierdas nuestros nuevos articulos</h2>
+  </div>
+
+  <div class="contenedor-linea">
+    <div class="linea-horizontal"></div>
+  </div>
+
+  <!-- =================Footer================ -->
+
+  <footer>
+    <div class="contact-form">
+      <h2>Envíanos un mensaje y dinos lo que piensas</h2>
+      <form>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" />
+        </div>
+        <div class="form-group">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Introduce un correo electrónico válido como ejemplo@gmail.com">
+        </div>
+        
+        <div class="form-group">
+          <label for="mensaje">Mensaje...</label>
+          <textarea id="mensaje" name="mensaje"></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </footer>
+
+  <!-- ========== VALIDACIÓN NOMBRE/APELLIDO FOOTER ========== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const soloLetras = (input) => {
+        input.addEventListener("input", function () {
+          this.value = this.value.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // eliminar tildes si fuera necesario
+          this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, "");
+        });
+      };
+
+      soloLetras(document.getElementById("nombre"));
+      soloLetras(document.getElementById("apellido"));
+    });
+  </script>
+</body>
+
+<!--Script del logo en index-->
+<script>
+  const floatingLogo = document.getElementById('floating-logo');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      floatingLogo.style.opacity = '1'; // visible
+    } else {
+      floatingLogo.style.opacity = '0'; // invisible
+    }
+  });
+</script>
+
+
+<!--Fin script-->
+</html>

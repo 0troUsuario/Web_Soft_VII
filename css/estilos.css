@@ -1,0 +1,707 @@
+/* Estilo general para el cuerpo */
+body {
+    background-color: #f8f9fa; /* Color de fondo suave */
+    font-family: 'Arial', sans-serif; /* Fuente más moderna */
+}
+ 
+  /* Contenedor que rodea la línea */
+.contenedor-linea {
+    padding: 0 20px;       /* Padding a la izquierda y derecha (ajusta según lo necesites) */
+  }
+  
+  /* Línea horizontal */
+  .linea-horizontal {
+    width: 100%;           /* Hace que la línea ocupe todo el ancho del contenedor */
+    height: 1px;           /* Establece el grosor de la línea */
+    background-color: black; /* Establece el color de la línea */
+  }
+
+
+  /* =========Encabezado============ */
+
+  .centrar-titulo {
+    display: flex;
+    justify-content: center;
+    font-family: 'Playfair Display', serif; /* Aplica la fuente elegante */
+    font-size: 8rem; /* Aumenta el tamaño del texto */
+    font-weight: 700; /* Asegura que el texto sea negrita */
+    color: #000000; /* Color de texto oscuro */
+    text-transform: uppercase; /* Opcional, hace el texto en mayúsculas */
+    letter-spacing: 2px; /* Opcional, agrega un poco de espaciado entre las letras */
+  }
+
+  .centrar-subtitulo{
+    display: flex;
+    justify-content: center;
+
+  }
+  
+
+/* ======Navbar======*/
+
+/* Añadir padding en la navbar para un espacio entre opciones */
+.navbar ul {
+  list-style: none; /* Quita los puntos de lista */
+  margin: 0; /* Elimina los márgenes */
+  padding: 0; /* Elimina el padding */
+  display: flex; /* Flexbox para alinear los elementos */
+  gap: 0; /* Sin espacio entre los elementos */
+}
+
+/* Estilo para cada opción de la navbar */
+.navbar li {
+  display: flex; /* Usar flex para centrar el contenido */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  padding: 10px; /* Padding interno en el cuadro */
+  border-left: 1px solid black; /* Borde izquierdo negro */
+  border-right: 1px solid black; /* Borde derecho negro */
+  background-color: white; /* Fondo blanco */
+  width: 100px; /* Ancho fijo para las opciones */
+  height: 40px; /* Alto fijo para las opciones */
+  box-sizing: border-box; /* Incluye el borde en las dimensiones totales */
+}
+
+/* Quitar el borde izquierdo del primer botón y el borde derecho del último botón */
+.navbar li:first-child {
+  border-left: none;
+}
+.navbar li:last-child {
+  border-right: none;
+}
+
+/* Estilo para los enlaces dentro de los cuadros */
+.navbar a {
+  text-decoration: none; /* Quita el subrayado */
+  color: #000; /* Color de texto negro */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  transition: transform 0.2s, color 0.2s; /* Animación suave al pasar el cursor */
+}
+
+/* Animación al pasar el cursor */
+.navbar a:hover {
+  color: #5d6a77; /* Cambia a gris oscuro al pasar el cursor */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* ======FinNavbar======*/
+
+
+
+
+/* ====== Estilo para el cuadro grande ====== */
+.cuadro-grande {
+  position: relative; /* Necesario para posicionar elementos superpuestos */
+  width: 40%; /* Ancho del cuadro grande */
+  aspect-ratio: 1 / 1; /* Mantiene forma cuadrada */
+  border: 2px solid black;
+  background-color: transparent;
+  box-sizing: border-box;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ====== Estilo para el rectángulo superpuesto ====== */
+.rectangulo-superpuesto {
+  position: absolute; /* Posiciona el rectángulo relativo al cuadro */
+  top: -10px; /* Sobresale hacia arriba (ajustable) */
+  left: 0; /* Alineado con el borde izquierdo del cuadro */
+  width: 60%; /* Ancho del rectángulo (ajustable) */
+  height: 60px; /* Altura del rectángulo (ajustable) */
+  background-color: white; /* Fondo blanco */
+  border: 1px solid black; /* Bordes delgados en negro */
+  display: flex; /* Para centrar el texto dentro del rectángulo */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  box-sizing: border-box;
+  z-index: 1; /* Asegura que esté por encima del cuadro */
+}
+
+/* ====== Estilo para el texto dentro del rectángulo ====== */
+.rectangulo-superpuesto span {
+  font-size: 18px; /* Tamaño del texto dentro del rectángulo (ajustable) */
+  font-weight: bold; /* Negrita */
+  color: black; /* Color del texto */
+  font-family: 'Cutive Mono', monospace; /* Fuente Monospace (Cutive Mono) */
+  text-align: center; /* Texto centrado */
+}
+
+
+
+
+/*=============texto "No te pierdas nuestros nuevos artículos"============ */
+
+#contenedor-perder {
+  text-align: center;  /* Centra el texto horizontalmente */
+}
+
+
+/* ====== Responsive design ====== */
+
+/* Pantallas menores a 768px (reduce tamaño del cuadro) */
+@media (max-width: 768px) {
+  .cuadro-grande {
+      width: 60%; /* Ajusta el tamaño */
+  }
+}
+
+/* Pantallas menores a 576px (aún más pequeño, manteniendo la forma) */
+@media (max-width: 576px) {
+  .cuadro-grande {
+      width: 80%; /* Reduce más el tamaño */
+  }
+}
+/* ====== Fin estilo para el cuadro grande ====== */
+
+
+
+
+/* Línea vertical */
+.linea-vertical {
+  width: 1px;           /* Hace que la línea ocupe todo el alto del contenedor */
+  height: 100%;           /* establece el alto */
+  background-color: black; /* Establece el color de la línea */
+}
+
+
+/* epa*/
+
+.contenedor-dos {
+  width: 50%;                    /* Ancho del div (ajústalo según necesites) */
+  height: 100px;                 /* Alto del div (ajústalo según necesites) */
+  border-top: none;              /* Sin borde superior */
+  border-left: none;             /* Sin borde izquierdo */
+  border-bottom: none;           /* Sin borde inferior */
+  border-right: 1px solid black; /* Borde solo a la derecha de 1 píxel de grosor */
+  background-color: transparent; /* Sin fondo */
+}
+
+
+/* Footer*/
+
+footer {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contact-form h2::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid black;
+  margin: 0 auto;
+  position: relative;
+  top: -15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: beige;
+}
+
+button {
+  background-color: #6a0dad;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5a0cad;
+}
+
+/* Ajuste para disposición */
+#nombre,
+#apellido {
+  display: inline-block;
+  width: calc(50% - 10px);
+  margin-right: 10px;
+}
+
+#apellido {
+  margin-right: 0;
+}
+
+#email,
+#mensaje {
+  width: 100%;
+}
+
+
+
+/* ====== Estilo para los divs cuadrados ====== */
+.contenedor-principal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra el contenido en la página */
+  align-items: center;
+  gap: 10px; /* Espacio entre los cuadrados */
+  margin: 20px auto; /* Margen superior e inferior */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  padding: 10px; /* Espaciado interno */
+}
+
+.cuadro {
+  width: 22%; /* Cuatro cuadros por fila en pantallas grandes */
+  aspect-ratio: 1 / 1; /* Mantiene un formato cuadrado */
+  border: 2px solid black; /* Borde negro */
+  background-color: transparent; /* Fondo transparente */
+  box-sizing: border-box; /* Incluye el borde en las dimensiones totales */
+}
+
+/* ====== Responsive design ====== */
+
+/* Pantallas menores a 768px (dos cuadros por fila) */
+@media (max-width: 768px) {
+  .cuadro {
+      width: 48%; /* Dos cuadros por fila */
+  }
+}
+
+/* Pantallas menores a 576px (un cuadro por fila) */
+@media (max-width: 576px) {
+  .cuadro {
+      width: 90%; /* Ocupa casi todo el ancho */
+      margin: 0 auto; /* Centra el cuadro */
+  }
+}
+
+
+
+/* ============================Productos, vista general==================================*/
+
+.imagen-el-david {
+  max-width: 100%;
+}
+
+.cuadro {
+  box-shadow: 0 10px 20px  rgba(0, 0, 0, 0.20); /* Efecto sombra del fondo de los cuadros*/
+}
+
+.info-producto{
+  padding: 15px 30px;
+}
+
+.cuadro img {
+  width: 100%; /*==========garantiza que todas las imagenes tengan un mismo tamaño==========*/
+  /* height: 300px; */  /* tamaño de la imagen (definido por nosotros) */
+  object-fit: cover;
+}
+
+/*=================Parte del contenido (texto)================*/
+
+/* Estilo para el nombre del producto (h2) */
+.cuadro .info-producto h2 {
+  font-size: 24px; /* Tamaño de la fuente */
+  font-family: 'Arial', sans-serif; /* Fuente de texto */
+  color: #333; /* Color del texto */
+  margin: 10px 0; /* Espaciado alrededor */
+}
+
+/* Estilo para el precio del producto */
+.cuadro .info-producto .price {
+  font-size: 20px; /* Tamaño de la fuente */
+  font-family: 'Courier New', monospace; /* Fuente para diferenciar */
+  color: #4b4140; /* Color rojo para destacar */
+  font-weight: bold; /* Negrita */
+  margin: 5px 0; /* Espaciado */
+}
+
+/* Opcional: Estilo para el botón */
+.cuadro .info-producto button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #292d30; /* Azul */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cuadro .info-producto button:hover {
+  background-color: #566975; /* Oscurecer al pasar el mouse */
+}
+
+
+/*=======================Imagen del contenedor "seccion prueba"=============================== */
+
+.imagenes-seccion-prueba {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+}
+
+/* ==============Parámetros de imagen en "seccion-prueba"===================*/
+
+
+.contenedor-imagen {
+  width: 100%; /* O el ancho específico del div */
+  height: 300px; /* Ajusta según lo que necesites */
+  overflow: hidden; /* Evita que el contenido se salga del div */
+}
+
+.contenedor-imagen img {
+  width: 100%; /* Ocupa todo el ancho del div */
+  height: 100%; /* Ocupa todo el alto del div */
+  object-fit: cover; /* Ajusta la imagen para que llene el contenedor */
+}
+
+/* Imagen del artículo */
+.imagen-articulo img {
+  width: 300px; /* Ajusta según tus necesidades */
+  height: auto; /* Mantén las proporciones */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar la imagen */
+}
+
+/* Contenedor de los detalles del artículo */
+.leche {
+  flex: 1; /* Permite que los detalles ocupen más espacio */
+  padding-left: 20px;
+  padding: 65px !important; 
+}
+
+/* Nombre del artículo */
+.nombre-articulo {
+  font-size: 35px;
+  color: black; /* Color principal */
+  margin-bottom: 10px;
+  text-align: left !important; /*pa asegurar que me haga caso, porque anda revelde el título */
+}
+
+/* Autor del artículo */
+.Autor-articulo {
+  font-size: 25px;
+  color: black; /* Color principal */
+  margin-bottom: 10px;
+}
+
+/* Precio del artículo */
+.precio {
+  font-size: 24px;
+  color: #566975; /* Color terciario */
+  margin-bottom: 15px;
+}
+
+/* Descripción del artículo */
+.descripcion-articulo {
+  font-size: 16px;
+  color: #333; /* Color gris oscuro para contraste */
+  line-height: 1.6;
+  margin-bottom: 20px;
+  
+}
+
+/* Lista de características */
+.caracteristicas-articulo {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.caracteristicas-articulo li {
+  font-size: 16px;
+  color: #566975; /* Color terciario */
+  margin-bottom: 5px;
+}
+
+/* Botón Comprar */
+.boton-comprar {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: black; /* Fondo negro */
+  color: white; /* Texto blanco */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Efectos */
+}
+
+.boton-comprar:hover {
+  background-color: #566975; /* Cambia a color terciario en hover */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Asegura que la sección sea responsive */
+@media (max-width: 768px) {
+  .plato {
+    flex-direction: column; /* Coloca elementos en columna en pantallas pequeñas */
+    align-items: flex-start;
+  }
+
+  .imagen-articulo img {
+    width: 100%; /* Imagen ocupa todo el ancho disponible */
+  }
+
+  .leche {
+    padding-left: 0;
+  }
+}
+
+/* Ajustar el padding de .leche */
+.leche {
+  padding: 20px; /* Reduce el padding para pantallas más pequeñas */
+  max-width: 1200px; /* Establece un ancho máximo para contenedores grandes */
+  margin: auto; /* Centra el contenedor */
+}
+
+/* Centrar nombre del artículo */
+.nombre-articulo {
+  text-align: center;
+}
+
+/* Asegúrate de que el contenedor se mantenga cuadrado */
+.conflei {
+  position: relative; /* Necesario para los ajustes de la imagen */
+  width: 100%; /* El contenedor puede ocupar todo el ancho disponible */
+  aspect-ratio: 1 / 1; /* Mantiene la proporción 1:1 (cuadrado) */
+  max-width: 1000px; /* Asegura que no crezca más allá de 1000px de ancho */
+  margin: 0 auto; /* Centra el contenedor en la pantalla */
+}
+
+/* Asegura que la imagen dentro del contenedor no se distorsione */
+.conflei img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  height: 100%; /* La imagen ocupa todo el alto del contenedor */
+  object-fit: cover; /* La imagen se ajusta al contenedor sin distorsionarse */
+  object-position: center; /* Centra la imagen dentro del contenedor */
+  border-radius: 0px; /* Opcional: redondear las esquinas de la imagen */
+} 
+
+
+
+
+
+/*a*/
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+/* Animación de expansión en los botones */
+@keyframes expand {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.expand-on-click {
+  transition: transform 0.3s ease-in-out;
+}
+
+.expand-on-click.active {
+  animation: expand 0.2s forwards;
+}
+
+
+/*=============Publicar - Sección==============*/
+
+
+/* estilos.css */
+
+
+.contenedor-formulario {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+}
+
+
+
+label {
+  font-size: 0.9rem;
+  color: #555;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aaa;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #000;
+}
+
+textarea {
+  resize: none;
+}
+
+.entrada-dimension, .entrada-peso {
+  display: flex;
+  gap: 0.5rem;
+}
+
+select {
+  width: 40%;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  background: #000;
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background: #444;
+}
+
+
+
+
+/*=============Titulo y subtitulo==============*/
+
+
+/* Aseguramos que el texto esté centrado */
+.centrar-titulo, .centrar-subtitulo {
+  text-align: center; /* Centra el texto */
+  margin: 0;          /* Elimina márgenes para mayor control */
+}
+
+/* Título */
+.centrar-titulo {
+  font-size: 7vw;     /* 10% del ancho de la ventana */
+  line-height: 1.2;    /* Para un mejor espaciado entre líneas */
+}
+
+/* Subtítulo */
+.centrar-subtitulo {
+  font-size: 2vw;      /* 5% del ancho de la ventana */
+  line-height: 1.4;
+  opacity: 0.8;        /* Le damos algo de transparencia al subtítulo */
+}
+
+/* Ajustes responsivos usando medias queries */
+@media (max-width: 768px) {
+  .centrar-titulo {
+    font-size: 8vw;  /* A medida que la pantalla se hace más pequeña, reducimos el tamaño */
+  }
+
+  .centrar-subtitulo {
+    font-size: 4vw;  /* Ajustamos el subtítulo a un tamaño adecuado */
+    width: 90%;      /* Limita el ancho para evitar desbordamiento */
+    margin: 0 auto;  /* Centra el subtítulo dentro de su contenedor */
+  }
+}
+
+@media (max-width: 480px) {
+  .centrar-titulo {
+    font-size: 12vw;  /* Para pantallas muy pequeñas, podemos hacer el título más grande */
+  }
+
+  .centrar-subtitulo {
+    font-size: 4vw;  /* Ajustamos el subtítulo para pantallas pequeñas */
+    width: 90%;      /* Limita el ancho */
+    margin: 0 auto;  /* Centra el subtítulo */
+  }
+}
+
+/*temporal*/
+
+
+
+
+.contenedor-borrar {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  background-color: #f4f4f4; /* Fondo para visualizar mejor */
+}
+
+.contenedor-formulario {
+  width: 400px; /* Ancho fijo del formulario */
+  padding: 2rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

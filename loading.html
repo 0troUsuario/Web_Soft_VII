@@ -1,0 +1,84 @@
+<!-- loading.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cargando...</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      color: white;
+      font-family: sans-serif;
+      font-size: 1.5em;
+    }
+
+    .spinner {
+      border: 5px solid rgba(255, 255, 255, 0.1);
+      border-top: 5px solid white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin-right: 15px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+          <img src="img/Dall-e_logo.jpg" alt="Logo" class="logo-img">
+        </div>
+        <div class="spinner"></div>
+        <div>Cargando...</div>
+      </div>
+  </div>
+
+  <!-- Estilo para el loading-->
+
+  <style>
+    .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo-img {
+  width: auto;
+  height: 400px; /* Cambia este valor para hacerla más grande o pequeña */
+  object-fit: contain;
+}
+
+  </style>
+
+  <script>
+    // Obtener el parámetro "next" de la URL
+    const params = new URLSearchParams(window.location.search);
+    const nextPage = params.get('next') || 'index.html';
+
+    // Redirigir después de 1.5 segundos
+    setTimeout(() => {
+      window.location.href = nextPage;
+    }, 1500);
+  </script>
+</body>
+</html>
