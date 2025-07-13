@@ -273,7 +273,7 @@
   </script>
 </body>
 
-<!--Script del logo en index-->
+<!--Script del logo en "inicio" -->
 <script>
   const floatingLogo = document.getElementById('floating-logo');
 
