@@ -97,14 +97,8 @@
         <div class="linea-horizontal"></div>
       </div>
       
-    <nav class="navbar">
-        <ul class="menunavbar">
-            <li> <a href="index.html">Inicio</a></li>
-            <li> <a href="publicar.html">Publicar</a></li>
-            <li> <a href="login.html">Login</a></li>
-            <li> <a href="enlace.html">Nosotros</a></li>
-        </ul>
-    </nav>
+   <!--====ref nav======-->
+    <?php include 'includes/navbar.php'; ?> 
 
         
     </div>
@@ -123,25 +117,24 @@
 
     <div class="plato">
       <div class="conflei"> <!-- Sección 1-->
-        <img src="img/Pensador.jpeg" alt="Pensador" class="imagenes-seccion-prueba">
+        <img src="img/guernica.jpg" alt="guernica" class="imagenes-seccion-prueba">
       </div>
 
       <div class="leche">
-        <h2 class="nombre-articulo">El Pensador</h2>
-        <h2 class="Autor-articulo"> <strong>Publicado por:</strong> Sara</h2>
-        <h2 class="precio">100$</h2>
+        <h2 class="nombre-articulo">Guernica</h2>
+        <h2 class="Autor-articulo"> <strong>Publicado por:</strong> Pablo</h2>
+        <h2 class="precio">38$</h2>
         <p class="descripcion-articulo">
-            Vendo una hermosa réplica de la famosa estatua "El Pensador" de Auguste Rodin. Esta obra icónica representa la reflexión profunda y la contemplación, 
-            ideal para quienes aprecian el arte y la filosofía. La réplica está elaborada con materiales de alta calidad, lo que le confiere durabilidad y 
-            un acabado estético impecable. La ofrezco a la venta por motivos de espacio personal, ya que he decidido reubicar mi colección de arte. 
-            Esta es una oportunidad única para llevar a tu hogar un símbolo de inspiración y pensamiento profundo.
+            Vendo réplica del cuadro "Guernica", una de las obras más emblemáticas del 
+            artista español Pablo Picasso. Este monumental mural, creado en respuesta al bombardeo de la ciudad de Guernica durante la Guerra Civil Española, es una 
+            poderosa representación de la angustia, el sufrimiento y la devastación causados por la guerra.
         </p>
         <!-- Lista de características -->
         <ul class="caracteristicas-articulo">
-          <li>Material: Hormigón</li>
-          <li>Altura: 8 metros</li>
-          <li>Peso: 1 tonelada</li>
-          <li>Color: Bronce oscuro</li>
+          <li>Material: Lienzo</li>
+          <li>Dimensión: 30cm x 50cm</li>
+          <li>Peso: 1lb</li>
+          <li>Color: Blanco, Negro, Gris</li>
         </ul>
         <!-- Botón para comprar -->
         <button class="boton-comprar">Comprar</button>
@@ -171,33 +164,7 @@
 
 <br>
 
-
-<!--================Footer================-->
-
-<footer>
-  <div class="contact-form">
-    <h2>Envíanos un mensaje y dinos lo que piensas</h2>
-    <form>
-      <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre">
-      </div>
-      <div class="form-group">
-        <label for="apellido">Apellido</label>
-        <input type="text" id="apellido" name="apellido">
-      </div>
-      <div class="form-group">
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="mensaje">Mensaje...</label>
-        <textarea id="mensaje" name="mensaje"></textarea>
-      </div>
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-</footer>
+<?php include 'includes/footer.php'; ?>
 
 
 

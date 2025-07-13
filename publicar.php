@@ -64,14 +64,7 @@
     <div class="linea-horizontal"></div>
   </div>
 
-  <nav class="navbar">
-    <ul class="menunavbar">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="publicar.html">Publicar</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="enlace.html">Nosotros</a></li>
-    </ul>
-  </nav>
+<?php include 'includes/navbar.php'; ?>
 
   <div class="contenedor-linea">
     <div class="linea-horizontal"></div>

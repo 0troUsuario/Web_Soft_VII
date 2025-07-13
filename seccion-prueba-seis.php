@@ -97,14 +97,8 @@
         <div class="linea-horizontal"></div>
       </div>
       
-    <nav class="navbar">
-        <ul class="menunavbar">
-            <li> <a href="index.html">Inicio</a></li>
-            <li> <a href="publicar.html">Publicar</a></li>
-            <li> <a href="login.html">Login</a></li>
-            <li> <a href="enlace.html">Nosotros</a></li>
-        </ul>
-    </nav>
+   <!--====ref nav======-->
+    <?php include 'includes/navbar.php'; ?> 
 
         
     </div>
@@ -123,17 +117,16 @@
 
     <div class="plato">
       <div class="conflei"> <!-- Sección 1-->
-        <img src="img/guernica.jpg" alt="guernica" class="imagenes-seccion-prueba">
+        <img src="img/valle-de-los-lamentos.jpg" alt="valle-de-los-lamentos" class="imagenes-seccion-prueba">
       </div>
 
       <div class="leche">
-        <h2 class="nombre-articulo">Guernica</h2>
-        <h2 class="Autor-articulo"> <strong>Publicado por:</strong> Pablo</h2>
-        <h2 class="precio">38$</h2>
+        <h2 class="nombre-articulo">Valle de los Lamentos</h2>
+        <h2 class="Autor-articulo"> <strong>Publicado por:</strong> José</h2>
+        <h2 class="precio">15$</h2>
         <p class="descripcion-articulo">
-            Vendo réplica del cuadro "Guernica", una de las obras más emblemáticas del 
-            artista español Pablo Picasso. Este monumental mural, creado en respuesta al bombardeo de la ciudad de Guernica durante la Guerra Civil Española, es una 
-            poderosa representación de la angustia, el sufrimiento y la devastación causados por la guerra.
+            Vendo un este lienzo del "Valle de los Lamentos" del autor "Kentaro Miura", hecho con pintura acrílica. 
+            Detalles en el lienzo con relieves y perfecta para decorar cualquier espacio
         </p>
         <!-- Lista de características -->
         <ul class="caracteristicas-articulo">
@@ -169,35 +162,7 @@
 
 
 <br>
-
-
-
-<!--================Footer================-->
-
-<footer>
-  <div class="contact-form">
-    <h2>Envíanos un mensaje y dinos lo que piensas</h2>
-    <form>
-      <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre">
-      </div>
-      <div class="form-group">
-        <label for="apellido">Apellido</label>
-        <input type="text" id="apellido" name="apellido">
-      </div>
-      <div class="form-group">
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="mensaje">Mensaje...</label>
-        <textarea id="mensaje" name="mensaje"></textarea>
-      </div>
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-</footer>
+<?php include 'includes/footer.php'; ?>
 
 
 

@@ -122,14 +122,7 @@
   </div>
 
 
-  <nav class="navbar">
-    <ul class="menunavbar">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="publicar.html">Publicar</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="enlace.html">Nosotros</a></li>
-    </ul>
-  </nav>
+<?php include 'includes/navbar.php'; ?>
 
   <div class="contenedor-linea">
     <div class="linea-horizontal"></div>
@@ -165,7 +158,7 @@
       <div class="info-producto">
         <h2>La Banana</h2>
         <p class="price">25$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-tres.html';">Ver más</button>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-tres.php';">Ver más</button>
       </div>
     </div>
 
@@ -176,7 +169,7 @@
       <div class="info-producto">
         <h2>El Pensador</h2>
         <p class="price">100$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-cuatro.html';">Ver más</button>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-cuatro.php';">Ver más</button>
       </div>
     </div>
 
@@ -187,7 +180,7 @@
       <div class="info-producto">
         <h2>El David (Estatua)</h2>
         <p class="price">550$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba.html';">Ver más</button>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba.php';">Ver más</button>
       </div>
     </div>
 
@@ -198,7 +191,7 @@
       <div class="info-producto">
         <h2>Noche Estrellada</h2>
         <p class="price">80$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-dos.html';">Ver más</button>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-dos.php';">Ver más</button>
       </div>
     </div>
 
@@ -209,7 +202,7 @@
       <div class="info-producto">
         <h2>Vigilantes</h2>
         <p class="price">10$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-cinco.html';">Ver más</button>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-cinco.php';">Ver más</button>
       </div>
     </div>
 
@@ -220,7 +213,7 @@
       <div class="info-producto">
         <h2>Valle de los Lamentos</h2>
         <p class="price">15$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-seis.html';">Ver más</button>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-seis.php';">Ver más</button>
       </div>
     </div>
 
@@ -231,7 +224,7 @@
       <div class="info-producto">
         <h2>Guernica</h2>
         <p class="price">38$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-siete.html';">Ver más</button>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-siete.php';">Ver más</button>
       </div>
     </div>
 
@@ -242,7 +235,7 @@
       <div class="info-producto">
         <h2>El Mirar</h2>
         <p class="price">18$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-ocho.html';">Ver más</button>
+        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-ocho.php';">Ver más</button>
       </div>
     </div>
   </div>
@@ -262,31 +255,7 @@
 
   <!-- =================Footer================ -->
 
-  <footer>
-    <div class="contact-form">
-      <h2>Envíanos un mensaje y dinos lo que piensas</h2>
-      <form>
-        <div class="form-group">
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" />
-        </div>
-        <div class="form-group">
-          <label for="apellido">Apellido</label>
-          <input type="text" id="apellido" name="apellido" />
-        </div>
-        <div class="form-group">
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Introduce un correo electrónico válido como ejemplo@gmail.com">
-        </div>
-        
-        <div class="form-group">
-          <label for="mensaje">Mensaje...</label>
-          <textarea id="mensaje" name="mensaje"></textarea>
-        </div>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-  </footer>
+<?php include 'includes/footer.php'; ?>
 
   <!-- ========== VALIDACIÓN NOMBRE/APELLIDO FOOTER ========== -->
   <script>

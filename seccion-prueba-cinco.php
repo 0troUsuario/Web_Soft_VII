@@ -96,21 +96,10 @@
     <div class="contenedor-linea">
         <div class="linea-horizontal"></div>
       </div>
-      
-    <nav class="navbar">
-        <ul class="menunavbar">
-            <li> <a href="index.html">Inicio</a></li>
-            <li> <a href="publicar.html">Publicar</a></li>
-            <li> <a href="login.html">Login</a></li>
-            <li> <a href="enlace.html">Nosotros</a></li>
-        </ul>
-    </nav>
 
-        
+   <!--====ref nav======-->
+<?php include 'includes/navbar.php'; ?>       
     </div>
-
-
-
       <div class="contenedor-linea">
         <div class="linea-horizontal"></div>
       </div>
@@ -123,24 +112,22 @@
 
     <div class="plato">
       <div class="conflei"> <!-- Sección 1-->
-        <img src="img/noche-estrellada.jpg" alt="Noche Estrellada" class="imagenes-seccion-prueba">
+        <img src="img/vigilantes.jpg" alt="vigilantes" class="imagenes-seccion-prueba">
       </div>
 
       <div class="leche">
-        <h2 class="nombre-articulo">La Noche Estrellada (Lienzo)</h2>
-        <h2 class="Autor-articulo"> <strong>Publicado por:</strong> Joseph</h2>
-        <h2 class="precio">$80</h2>
+        <h2 class="nombre-articulo">Vigilantes</h2>
+        <h2 class="Autor-articulo"> <strong>Publicado por:</strong> Checo Pérez</h2>
+        <h2 class="precio">10$</h2>
         <p class="descripcion-articulo">
-            Vendo réplica de "La Noche Estrellada", la célebre obra maestra de Vincent van Gogh, una pieza que captura con maestría la esencia del movimiento postimpresionista. Esta icónica pintura, creada en 1889, es famosa por su vibrante paleta de colores azul profundo, amarillo radiante y toques de blanco que evocan la 
-            noche estrellada en un cielo lleno de energía y emoción. En el cuadro, las ondulaciones del viento se entrelazan con una aldea tranquila bajo un cielo tumultuoso, donde las estrellas parecen danzar y brillar con una intensidad que casi se puede sentir. La textura rica y los trazos enérgicos que caracterizan la técnica de Van Gogh no solo aportan dinamismo a la composición, sino que también transmiten 
-            un profundo sentido de melancolía y esperanza. 
+            Vendo hermosas estatuas hechas de cobre de humanoides", perfecta para colocar en el jardín commo decoración
         </p>
         <!-- Lista de características -->
         <ul class="caracteristicas-articulo">
-          <li>Material: Lienzo hecho de lino</li>
-          <li>Dimensión: 40cm x 50cm</li>
-          <li>Peso: 1 kg</li>
-          <li>Color: Blanco y negro</li>
+          <li>Material: Cobre</li>
+          <li>Altura: 1 Metro c/u</li>
+          <li>Peso: 5lb</li>
+          <li>Color: Marrón</li>
         </ul>
         <!-- Botón para comprar -->
         <button class="boton-comprar">Comprar</button>
@@ -148,6 +135,11 @@
     </div>
 
      <!--====Fin división del contenido======-->
+
+
+
+
+
 
 <!-- mas líneas de división-->
 
@@ -169,34 +161,7 @@
 
 
 <br>
-
-
-<!--================Footer================-->
-
-<footer>
-  <div class="contact-form">
-    <h2>Envíanos un mensaje y dinos lo que piensas</h2>
-    <form>
-      <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre">
-      </div>
-      <div class="form-group">
-        <label for="apellido">Apellido</label>
-        <input type="text" id="apellido" name="apellido">
-      </div>
-      <div class="form-group">
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="mensaje">Mensaje...</label>
-        <textarea id="mensaje" name="mensaje"></textarea>
-      </div>
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-</footer>
+<?php include 'includes/footer.php'; ?>
 
 
 
