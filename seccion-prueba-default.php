@@ -117,6 +117,9 @@ if ($fila = $resultado->fetch_assoc()) {
   <div class="contenedor-linea"><div class="linea-horizontal"></div></div>
   <br><br>
   <?php include 'includes/footer.php'; ?>
+
+  <!-- Widget del carrito -->
+  <?php include 'includes/carrito_widget.php'; ?>
 </body>
 </html>
 <?php

@@ -271,6 +271,9 @@ $resultado = $conexion->query($sql);
 
   <?php include 'includes/footer.php'; ?>
 
+  <!-- Widget del carrito -->
+  <?php include 'includes/carrito_widget.php'; ?>
+
   <!-- ========== VALIDACIÓN NOMBRE/APELLIDO FOOTER ========== -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {

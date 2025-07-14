@@ -42,7 +42,7 @@
       .conflei {
         width: 45%;                /* Cada div hijo ocupa el 45% del ancho del contenedor padre */
         height: 800px;             /* Este valor modifica la altura del contenedor hijo */
-        background-color: white;  /* Fondo blanco */
+        background-color: white;  /* Bordes transparentes (invisibles), para ponerlo transparente simplemente agregar "transparent al color que sale" */
         border: 1px solid black;  /* Bordes transparentes (invisibles), para ponerlo transparente simplemente agregar "transparent al color que sale" */
         box-sizing: border-box;   /* Asegura que el padding y el borde no aumenten el tamaño total del div */
       }
@@ -166,8 +166,8 @@
 
 <?php include 'includes/footer.php'; ?>
 
-
+<!-- Widget del carrito -->
+<?php include 'includes/carrito_widget.php'; ?>
 
 </body>
 </html>
-

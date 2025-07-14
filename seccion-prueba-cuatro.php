@@ -166,6 +166,8 @@
 <br>
 <?php include 'includes/footer.php'; ?>
 
+<!-- Widget del carrito -->
+<?php include 'includes/carrito_widget.php'; ?>
+
 </body>
 </html>
-
