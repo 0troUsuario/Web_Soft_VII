@@ -3,8 +3,7 @@
 $host = "localhost";
 $usuario = "root";
 $contrasena = "";
-$basededatos = "tienda_pinturas"; 
-
+$basededatos = "dalle";  // Cambiado a "dalle" que es tu base actual
 
 $conexion = new mysqli($host, $usuario, $contrasena, $basededatos);
 

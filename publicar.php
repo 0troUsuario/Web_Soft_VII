@@ -1,3 +1,52 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
+
+    $mysqli = new mysqli('localhost', 'root', '', 'dalle');
+    if ($mysqli->connect_errno) {
+        die("Fallo la conexión a MySQL: " . $mysqli->connect_error);
+    }
+
+
+    $nombre = $mysqli->real_escape_string($_POST['nombre']);
+    $precio = floatval($_POST['precio']);
+    $descripcion = $mysqli->real_escape_string($_POST['descripcion']);
+    $material = $mysqli->real_escape_string($_POST['material']);
+    $dimension = $mysqli->real_escape_string($_POST['dimension']);
+    $unidad_dimension = $mysqli->real_escape_string($_POST['unidad-dimension']);
+    $peso = floatval($_POST['peso']);
+    $unidad_peso = $mysqli->real_escape_string($_POST['unidad-peso']);
+    $color = $mysqli->real_escape_string($_POST['color'] ?? ''); // Por si no viene, lo deja vacío
+
+    // Subida de la imagen
+    if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
+        $nombreArchivo = basename($_FILES['imagen']['name']);
+        $rutaTemporal = $_FILES['imagen']['tmp_name'];
+        $carpetaDestino = 'uploads/';
+        $rutaDestino = $carpetaDestino . uniqid() . "_" . $nombreArchivo;
+
+        // Mueve el archivo a la carpeta uploads 
+        if (!move_uploaded_file($rutaTemporal, $rutaDestino)) {
+            die("Error al subir la imagen.");
+        }
+    } else {
+        die("No se ha subido ninguna imagen o hay un error en la subida.");
+    }
+
+    // Inserta el producto en la base de datos, claro que sí  
+    $sql = "INSERT INTO productos (nombre, precio, descripcion, imagen, material, dimension, unidad_dimension, peso, unidad_peso, color)
+            VALUES ('$nombre', $precio, '$descripcion', '$rutaDestino', '$material', '$dimension', '$unidad_dimension', $peso, '$unidad_peso', '$color')";
+
+    if ($mysqli->query($sql)) {
+        // Redirige a inicio.php al terminar
+        header('Location: inicio.php');
+        exit;
+    } else {
+        die("Error al insertar en la base de datos: " . $mysqli->error);
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -74,7 +123,7 @@
     <div class="contenedor-publicar">
       <div class="contenedor-borrar">
         <div class="contenedor-formulario">
-          <form id="formulario-producto">
+          <form id="formulario-producto" method="POST" enctype="multipart/form-data" action="publicar.php">
             <h1 class="publicar-producto">Publicar Producto</h1>
 
             <label for="nombre">Nombre</label>
@@ -112,7 +161,12 @@
               </select>
             </div>
 
-            <button type="submit">Publicar</button>
+<label for="color">Color</label>
+<input type="text" id="color" name="color" placeholder="Ingresa el color" />
+
+
+            <button type="submit" name="submit">Publicar</button>
+
           </form>
         </div>
       </div>

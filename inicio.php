@@ -1,3 +1,10 @@
+<?php
+include 'conexion.php';
+
+$sql = "SELECT * FROM productos ORDER BY fecha_publicacion DESC";
+$resultado = $conexion->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,7 +19,7 @@
     crossorigin="anonymous"
   />
 
-  <!-- centrea la navbar -->
+  <!-- centrar navbar -->
   <style>
     .navbar {
       display: flex;
@@ -92,27 +99,22 @@
 </head>
 <body>
 
-    <!--Logo-->
-
-    <img src="img/Dall-e_PNG.png" alt="Logo flotante" id="floating-logo" class="d-none d-md-block">
-
-
-    <style>
-      #floating-logo {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  height: 150px;        /* Puedes ajustar el tamaño aquí */
-  width: auto;         /* Mantiene proporción */
-  opacity: 0;          /* Comienza invisible */
-  transition: opacity 0.3s ease-in-out;
-  pointer-events: none; /* Para que no interfiera con clics */
-  z-index: 1000;       /* Asegura que esté encima de otros elementos */
-}
-
-
-    </style>
-<!-- fin logo-->
+  <!-- Logo -->
+  <img src="img/Dall-e_PNG.png" alt="Logo flotante" id="floating-logo" class="d-none d-md-block" />
+  <style>
+    #floating-logo {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      height: 150px;        /* Ajustar tamaño */
+      width: auto;          /* Mantener proporción */
+      opacity: 0;           /* Comienza invisible */
+      transition: opacity 0.3s ease-in-out;
+      pointer-events: none; /* Para que no interfiera con clics */
+      z-index: 1000;        /* Asegura que esté encima de otros elementos */
+    }
+  </style>
+  <!-- Fin logo -->
 
   <h1 class="centrar-titulo">Dall-E</h1>
   <h2 class="centrar-subtitulo">Todo lo que puedas encontrar, en un solo lugar</h2>
@@ -121,8 +123,7 @@
     <div class="linea-horizontal"></div>
   </div>
 
-
-<?php include 'includes/navbar.php'; ?>
+  <?php include 'includes/navbar.php'; ?>
 
   <div class="contenedor-linea">
     <div class="linea-horizontal"></div>
@@ -143,13 +144,9 @@
     <div class="linea-horizontal"></div>
   </div>
 
+  <!-- Degradado -->
 
-<!-- Degradado-->
-
-
-
-  <!-- Contenedor con los contenedores-->
-
+  <!-- Contenedor con los contenedores estáticos -->
   <div class="contenedor-principal">
     <div class="cuadro">
       <figure>
@@ -238,6 +235,23 @@
         <button class="btn-ver-mas" onclick="location.href='seccion-prueba-ocho.php';">Ver más</button>
       </div>
     </div>
+
+    <!-- Contenedor producto dinámico desde la base de datos -->
+    <?php
+    if ($resultado && $resultado->num_rows > 0) {
+        while ($fila = $resultado->fetch_assoc()) {
+            echo '<div class="cuadro">';
+            echo '<figure><img src="' . htmlspecialchars($fila['imagen']) . '" alt="' . htmlspecialchars($fila['nombre']) . '" class="imagen-el-david" /></figure>';
+            echo '<div class="info-producto">';
+            echo '<h2>' . htmlspecialchars($fila['nombre']) . '</h2>';
+            echo '<p class="price">$' . htmlspecialchars($fila['precio']) . '</p>';
+            echo '<button class="btn-ver-mas" onclick="location.href=\'seccion-prueba-default.php?id=' . (int)$fila['id'] . '\'">Ver más</button>';
+            echo '</div></div>';
+        }
+    } else {
+        echo '<p>No hay productos disponibles.</p>';
+    }
+    ?>
   </div>
 
   <br /><br />
@@ -253,9 +267,9 @@
     <div class="linea-horizontal"></div>
   </div>
 
-  <!-- =================Footer================ -->
+  <!-- ================= Footer ================= -->
 
-<?php include 'includes/footer.php'; ?>
+  <?php include 'includes/footer.php'; ?>
 
   <!-- ========== VALIDACIÓN NOMBRE/APELLIDO FOOTER ========== -->
   <script>
@@ -271,21 +285,22 @@
       soloLetras(document.getElementById("apellido"));
     });
   </script>
+  
+
+  <!-- Script del logo flotante -->
+  <script>
+    const floatingLogo = document.getElementById('floating-logo');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) {
+        floatingLogo.style.opacity = '1'; // visible
+      } else {
+        floatingLogo.style.opacity = '0'; // invisible
+      }
+    });
+  </script>
+
+  <?php $conexion->close(); ?>
+
 </body>
-
-<!--Script del logo en "inicio" -->
-<script>
-  const floatingLogo = document.getElementById('floating-logo');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {
-      floatingLogo.style.opacity = '1'; // visible
-    } else {
-      floatingLogo.style.opacity = '0'; // invisible
-    }
-  });
-</script>
-
-
-<!--Fin script-->
 </html>

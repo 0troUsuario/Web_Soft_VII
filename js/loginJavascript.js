@@ -1,4 +1,4 @@
-// Script login
+
 
 // Detecta el tamaño de la ventana y ajusta elementos dinámicamente
 window.addEventListener("resize", () => {
