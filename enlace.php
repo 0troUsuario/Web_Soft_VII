@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- centrea la navbar-->
+    
     <style>
       .navbar{
         display: flex;
@@ -15,7 +15,7 @@
 
       }
     </style>
-    <!--FinCentrea-->
+   
     <style>
       .centrar-titulo{
         display: flex;
@@ -30,7 +30,7 @@
       }
     </style>
 
-    <!-- test-->
+
 
     <style>
       .contenedor-prueba{
@@ -54,8 +54,7 @@
         padding: 200px;
       }
     </style>
-      <!--fin test-->
-    
+      
 
 
     <style>
@@ -74,26 +73,26 @@
     </style>
     
     <style>
-      /* Aseguramos que el contenedor tenga un tamaño específico */
+      
 
 
 .destacada {
-  margin: 0;            /* Eliminamos márgenes predeterminados */
-  padding: 0;           /* Eliminamos padding para controlar el tamaño */
-  width: 100%;          /* Asegura que figure ocupe el 100% del contenedor */
-  height: 100%;         /* Asegura que figure ocupe el 100% del contenedor */
+  margin: 0;            
+  padding: 0;          
+  width: 100%;        
+  height: 100%;       
 }
 
 .imagen-destacada {
-  width: 100%;          /* Imagen ocupará todo el ancho */
-  height: 100%;         /* Imagen ocupará todo el alto */
-  object-fit: cover;    /* La imagen cubre el área sin distorsionarse */
-  object-position: center;  /* Centra la imagen dentro del contenedor */
+  width: 100%;          
+  height: 100%;        
+  object-fit: cover;    
+  object-position: center; 
 }
 @media (max-width: 768px) {
   .cuadro-grande {
-    width: 90vw; /* Ocupa el 90% del ancho de la pantalla */
-    height: auto; /* Mantiene la altura proporcional al ancho */
+    width: 90vw; 
+    height: auto; 
   }
 }
       
@@ -124,8 +123,6 @@
         <div class="linea-horizontal"></div>
       </div>
       
-      <!-- cuadro grande, sección-->
-
       <div class="seccion-cuadro-grande">
         <div class="cuadro-grande">
           <figure class="destacada">
@@ -136,32 +133,17 @@
           </div>
         </div>
       </div>
-      
-       
-    
 
       <div class="contenedor-linea">
         <div class="linea-horizontal"></div>
       </div>
       
-      <!--contenedor dos-->
-<!-- contenido-->
+   
 
-
-
-
-
-
-<!-- otra línea de división-->
 <div class="contenedor-linea">
   <div class="linea-horizontal"></div>
  </div>
 
-
-
-
-
-<!-- contenido-->
 <?php include 'includes/footer.php'; ?>
 
 

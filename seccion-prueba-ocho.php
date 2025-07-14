@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- centrea la navbar-->
+  
     <style>
       .navbar{
         display: flex;
@@ -15,7 +15,7 @@
 
       }
     </style>
-    <!--FinCentrea-->
+
     <style>
       h1{
         display: flex;
@@ -25,62 +25,62 @@
     </style>
 
 
-    <!--====estilo contenedor==-->
+
     <style>
-      /* Estilos generales para el div padre */
+    
       .plato {
-        display: flex;             /* Usamos flexbox para alinear los elementos dentro del contenedor */
-        justify-content: center;   /* Espacio entre los elementos hijos */
-        width: 100%;               /* El contenedor padre ocupa todo el ancho disponible */
-        background-color: transparent; /* Contenedor padre transparente */
-        gap: 10px;                 /* Distancia entre los contenedores hijos, puedes modificar este valor */
-        padding: 20px;             /* Agrega un margen interno (padding) para que los hijos no toquen los bordes del contenedor */
-        box-sizing: border-box;    /* Asegura que el padding no afecte el ancho total */
+        display: flex;             
+        justify-content: center;  
+        width: 100%;               
+        background-color: transparent; 
+        gap: 10px;                 
+        padding: 20px;             
+        box-sizing: border-box;    
       }
     
-      /* Estilo para el div 'conflei' (contenido 1) */
+      
       .conflei {
-        width: 45%;                /* Cada div hijo ocupa el 45% del ancho del contenedor padre */
-        height: 800px;             /* Este valor modifica la altura del contenedor hijo */
-        background-color: white;  /* Fondo blanco */
-        border: 1px solid black;  /* Bordes transparentes (invisibles), para ponerlo transparente simplemente agregar "transparent al color que sale" */
-        box-sizing: border-box;   /* Asegura que el padding y el borde no aumenten el tamaño total del div */
+        width: 45%;                
+        height: 800px;             
+        background-color: white;  
+        border: 1px solid black;  
+        box-sizing: border-box;  
       }
     
-      /* Estilo para el div 'leche' (contenido 2) */
+      
       .leche {
-        width: 45%;                /* Similar al div 'conflei', ocupa el 45% del ancho del div padre */
-        height: 800px;             /* Este valor modifica la altura del contenedor hijo */
-        background-color: white;  /* Fondo blanco */
-        border-top: 1px solid transparent;    /* Borde superior invisible */
-        border-right: 1px solid transparent;  /* Borde derecho invisible */
-        border-bottom: 1px solid transparent; /* Borde inferior invisible */
-        border-left: 1px solid black;  /* Borde izquierdo negro */
-        box-sizing: border-box;   /* Asegura que el padding y el borde no aumenten el tamaño */
+        width: 45%;                
+        height: 800px;             
+        background-color: white;  
+        border-top: 1px solid transparent;    
+        border-right: 1px solid transparent;  
+        border-bottom: 1px solid transparent; 
+        border-left: 1px solid black;  
+        box-sizing: border-box;  
       }
     
-      /* Media query para pantallas pequeñas (menos de 768px) */
+     
       @media (max-width: 768px) {
         .plato {
-          flex-direction: column;  /* Hace que los divs se apilen verticalmente */
+          flex-direction: column;  
         }
     
-        /* Estilo para el div 'conflei' cuando la pantalla es pequeña */
+        
         .conflei {
-          width: 80%;   /* Ocupa el 80% del ancho del contenedor padre */
-          margin: 10px auto;  /* Centrado y margen superior e inferior */
-          height: auto;       /* La altura será ajustada automáticamente */
-          aspect-ratio: 1;    /* Hace que el ancho y la altura sean iguales (cuadrado) */
+          width: 80%;  
+          margin: 10px auto;  
+          height: auto;     
+          aspect-ratio: 1;    
         }
     
         .leche {
-          width: 90%;   /* El ancho aumenta para ocupar más espacio */
-          margin: 10px auto;  /* Centrado y un margen en la parte superior e inferior */
+          width: 90%;
+          margin: 10px auto;  
         }
     
-        /* Estilo para los bordes de 'conflei' y 'leche' en pantallas pequeñas */
+      
         .conflei, .leche {
-          border: 1px solid black;  /* Los bordes se vuelven negros */
+          border: 1px solid black;  
         }
       }
     </style>

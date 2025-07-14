@@ -254,7 +254,7 @@ session_start();
   </div>
 
   <script>
-    // Mostrar / ocultar contraseña
+    
     const checkbox = document.getElementById("ver-contrasena");
     const passwordInput = document.querySelector('input[name="contrasena"]');
     const sparkZone = document.getElementById("spark-zone");

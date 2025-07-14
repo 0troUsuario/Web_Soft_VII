@@ -19,7 +19,7 @@ $resultado = $conexion->query($sql);
     crossorigin="anonymous"
   />
 
-  <!-- centrar navbar -->
+ 
   <style>
     .navbar {
       display: flex;
@@ -99,22 +99,22 @@ $resultado = $conexion->query($sql);
 </head>
 <body>
 
-  <!-- Logo -->
+
   <img src="img/Dall-e_PNG.png" alt="Logo flotante" id="floating-logo" class="d-none d-md-block" />
   <style>
     #floating-logo {
       position: fixed;
       top: 10px;
       left: 10px;
-      height: 150px;        /* Ajustar tamaño */
-      width: auto;          /* Mantener proporción */
-      opacity: 0;           /* Comienza invisible */
+      height: 150px;      
+      width: auto;          
+      opacity: 0;          
       transition: opacity 0.3s ease-in-out;
-      pointer-events: none; /* Para que no interfiera con clics */
-      z-index: 1000;        /* Asegura que esté encima de otros elementos */
+      pointer-events: none; 
+      z-index: 1000;       
     }
   </style>
-  <!-- Fin logo -->
+
 
   <h1 class="centrar-titulo">Dall-E</h1>
   <h2 class="centrar-subtitulo">Todo lo que puedas encontrar, en un solo lugar</h2>
@@ -144,9 +144,8 @@ $resultado = $conexion->query($sql);
     <div class="linea-horizontal"></div>
   </div>
 
-  <!-- Degradado -->
 
-  <!-- Contenedor con los contenedores estáticos -->
+
   <div class="contenedor-principal">
     <div class="cuadro">
       <figure>
@@ -236,7 +235,7 @@ $resultado = $conexion->query($sql);
       </div>
     </div>
 
-    <!-- Contenedor producto dinámico desde la base de datos -->
+  
     <?php
     if ($resultado && $resultado->num_rows > 0) {
         while ($fila = $resultado->fetch_assoc()) {
@@ -267,16 +266,16 @@ $resultado = $conexion->query($sql);
     <div class="linea-horizontal"></div>
   </div>
 
-  <!-- ================= Footer ================= -->
+ 
 
   <?php include 'includes/footer.php'; ?>
 
-  <!-- ========== VALIDACIÓN NOMBRE/APELLIDO FOOTER ========== -->
+ 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const soloLetras = (input) => {
         input.addEventListener("input", function () {
-          this.value = this.value.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // eliminar tildes si fuera necesario
+          this.value = this.value.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); 
           this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, "");
         });
       };
@@ -287,15 +286,15 @@ $resultado = $conexion->query($sql);
   </script>
   
 
-  <!-- Script del logo flotante -->
+  
   <script>
     const floatingLogo = document.getElementById('floating-logo');
 
     window.addEventListener('scroll', () => {
       if (window.scrollY > 0) {
-        floatingLogo.style.opacity = '1'; // visible
+        floatingLogo.style.opacity = '1'; 
       } else {
-        floatingLogo.style.opacity = '0'; // invisible
+        floatingLogo.style.opacity = '0';
       }
     });
   </script>

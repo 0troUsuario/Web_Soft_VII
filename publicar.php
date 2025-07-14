@@ -56,13 +56,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
   <title>Publicar</title>
   <link rel="stylesheet" href="css/estilos.css" />
 
-  <!-- Google Fonts -->
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Bootstrap CSS -->
+ 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
-  <!-- Estilos en línea -->
+
   <style>
     .navbar {
       display: flex;
@@ -192,7 +192,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     </div>
   </div>
 
-  <!-- Script embebido -->
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const campos = document.querySelectorAll('#formulario-producto input, #formulario-producto select, #formulario-producto textarea');
@@ -211,7 +211,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
         });
       });
 
-      // Validación personalizada para el campo "nombre"
+    
       const nombreInput = document.getElementById('nombre');
       nombreInput.addEventListener('input', function () {
         this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '');

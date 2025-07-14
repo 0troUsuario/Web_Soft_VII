@@ -81,7 +81,7 @@
         <div class="linea-horizontal"></div>
     </div>
 
-        <!--====ref nav======-->
+   
         <?php include 'includes/navbar.php'; ?> 
 
     <div class="contenedor-linea">

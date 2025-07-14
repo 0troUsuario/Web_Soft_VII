@@ -29,12 +29,12 @@
     <style>
       /* Estilos generales para el div padre */
       .plato {
-        display: flex;             /* Usamos flexbox para alinear los elementos dentro del contenedor */
+        display: flex;             
         justify-content: center;   /* Espacio entre los elementos hijos */
         width: 100%;               /* El contenedor padre ocupa todo el ancho disponible */
         background-color: transparent; /* Contenedor padre transparente */
         gap: 10px;                 /* Distancia entre los contenedores hijos, puedes modificar este valor */
-        padding: 20px;             /* Agrega un margen interno (padding) para que los hijos no toquen los bordes del contenedor */
+        padding: 20px;             /* Padding interno*/
         box-sizing: border-box;    /* Asegura que el padding no afecte el ancho total */
       }
     
@@ -55,32 +55,32 @@
         border-top: 1px solid transparent;    /* Borde superior invisible */
         border-right: 1px solid transparent;  /* Borde derecho invisible */
         border-bottom: 1px solid transparent; /* Borde inferior invisible */
-        border-left: 1px solid black;  /* Borde izquierdo negro */
-        box-sizing: border-box;   /* Asegura que el padding y el borde no aumenten el tamaño */
+        border-left: 1px solid black;  
+        box-sizing: border-box;   
       }
     
-      /* Media query para pantallas pequeñas (menos de 768px) */
+      
       @media (max-width: 768px) {
         .plato {
-          flex-direction: column;  /* Hace que los divs se apilen verticalmente */
+          flex-direction: column;  
         }
     
-        /* Estilo para el div 'conflei' cuando la pantalla es pequeña */
+        
         .conflei {
-          width: 80%;   /* Ocupa el 80% del ancho del contenedor padre */
-          margin: 10px auto;  /* Centrado y margen superior e inferior */
-          height: auto;       /* La altura será ajustada automáticamente */
-          aspect-ratio: 1;    /* Hace que el ancho y la altura sean iguales (cuadrado) */
+          width: 80%;   
+          margin: 10px auto;  
+          height: auto;       
+          aspect-ratio: 1;    
         }
     
         .leche {
-          width: 90%;   /* El ancho aumenta para ocupar más espacio */
-          margin: 10px auto;  /* Centrado y un margen en la parte superior e inferior */
+          width: 90%;   
+          margin: 10px auto;  
         }
     
-        /* Estilo para los bordes de 'conflei' y 'leche' en pantallas pequeñas */
+        
         .conflei, .leche {
-          border: 1px solid black;  /* Los bordes se vuelven negros */
+          border: 1px solid black;  
         }
       }
     </style>

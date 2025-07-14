@@ -1,4 +1,4 @@
-<!-- loading.html -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -48,7 +48,7 @@
       </div>
   </div>
 
-  <!-- Estilo para el loading-->
+  
 
   <style>
     .container {
@@ -64,18 +64,18 @@
 
 .logo-img {
   width: auto;
-  height: 400px; /* Cambia este valor para hacerla más grande o pequeña */
+  height: 400px; 
   object-fit: contain;
 }
 
   </style>
 
   <script>
-    // Obtener el parámetro "next" de la URL
+   
     const params = new URLSearchParams(window.location.search);
     const nextPage = params.get('next') || 'inicio.php';
 
-    // Redirigir después de 1.5 segundos
+ 
     setTimeout(() => {
       window.location.href = nextPage;
     }, 1500);

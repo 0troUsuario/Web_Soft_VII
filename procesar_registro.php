@@ -1,6 +1,5 @@
 <?php
-/*Esto de abajo para evitar doble registrto al actualizar 
-(Todavía no testeo esta parte de abajo, pero si mi lógica no me ffalla debería cumplir su función) AAAAAAA, por qué nadie crea la base de datos? :c  */
+
 session_start();
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
   header("Location: registro.php");
@@ -21,7 +20,7 @@ $cedula     = $_POST['cedula'] ?? '';
 $correo     = $_POST['correo'] ?? '';
 $contrasena = $_POST['contrasena'] ?? '';
 
-// Hasheo esta shingadera para cifrar contraseña
+
 $contrasena_hashed = password_hash($contrasena, PASSWORD_DEFAULT);
 
 $sql = "INSERT INTO usuarios (nombre, apellido, fecha, cedula, correo, contrasena)

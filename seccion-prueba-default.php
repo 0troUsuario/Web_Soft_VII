@@ -1,7 +1,7 @@
 <!-- Default adaptable para los artículos que se muestran en pantalla añadidos de la base de datos mediante "Publicar"-->
 
 <?php
-$conexion = new mysqli("localhost", "root", "", "dalle"); // Sebo NO OLVIDAR cambiar el nombre de esta base de datos ("Dalle") por otro.
+$conexion = new mysqli("localhost", "root", "", "dalle"); 
  
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);

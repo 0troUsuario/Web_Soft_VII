@@ -229,7 +229,7 @@
   <div class="register-container">
     <a href="inicio.php" class="back-button"><i class="fas fa-chevron-left"></i></a>
     <h2>Crear Cuenta</h2>
-    <form method="POST" action="procesar_registro.php" onsubmit="return validarFormulario()"> <!-- esto para validar (por si se me olvida)-->
+    <form method="POST" action="procesar_registro.php" onsubmit="return validarFormulario()"> 
       <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
       <input type="text" id="apellido" name="apellido" placeholder="Apellido" required />
       <input type="date" id="fecha" name="fecha" required />
