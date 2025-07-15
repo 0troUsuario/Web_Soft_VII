@@ -220,8 +220,8 @@ session_start();
 
     <h2>Iniciar Sesión</h2>
 
-    <form method="POST" action="validar_login.php" id="loginForm">
-      <input type="text" name="usuario" placeholder="Usuario" required />
+    <form method="POST" action="validar-login.php" id="loginForm">
+      <input type="text" name="usuario" placeholder="Correo electrónico" required />
       <input type="password" name="contrasena" placeholder="Contraseña" required />
 
       <div class="toggle-password">

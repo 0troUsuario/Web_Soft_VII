@@ -1,41 +1,27 @@
 <?php
+$mysqli = new mysqli('localhost', 'root', '', 'dalle');
 
-session_start();
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-  header("Location: registro.php");
-  exit();
-}
-/*Fin*/
-
-$conexion = new mysqli("localhost", "root", "", "nombre_de_tu_base_de_datos"); // Aquí debo recordar reemplazar esto para la base de datos, todavía no está creada
-
-if ($conexion->connect_error) {
-  die("Conexión fallida: " . $conexion->connect_error);
+if ($mysqli->connect_errno) {
+    die("Error en la conexión: " . $mysqli->connect_error);
 }
 
-$nombre     = $_POST['nombre'] ?? '';
-$apellido   = $_POST['apellido'] ?? '';
-$fecha      = $_POST['fecha'] ?? '';
-$cedula     = $_POST['cedula'] ?? '';
-$correo     = $_POST['correo'] ?? '';
-$contrasena = $_POST['contrasena'] ?? '';
+$nombre = $mysqli->real_escape_string($_POST['nombre']);
+$apellido = $mysqli->real_escape_string($_POST['apellido']);
+$fecha = $_POST['fecha'];
+$cedula = $mysqli->real_escape_string($_POST['cedula']);
+$correo = $mysqli->real_escape_string($_POST['correo']);
+$contrasena = password_hash($_POST['contrasena'], PASSWORD_DEFAULT); 
 
+$query = "INSERT INTO usuarios (nombre, apellido, fecha, cedula, correo, contraseña)
+          VALUES ('$nombre', '$apellido', '$fecha', '$cedula', '$correo', '$contrasena')";
 
-$contrasena_hashed = password_hash($contrasena, PASSWORD_DEFAULT);
-
-$sql = "INSERT INTO usuarios (nombre, apellido, fecha, cedula, correo, contrasena)
-        VALUES (?, ?, ?, ?, ?, ?)";
-
-$stmt = $conexion->prepare($sql);
-$stmt->bind_param("ssssss", $nombre, $apellido, $fecha, $cedula, $correo, $contrasena_hashed);
-
-if ($stmt->execute()) {
-  echo "<script>alert('¡Registro exitoso!'); window.location.href='index.php';</script>";
+if ($mysqli->query($query)) {
+    header("Location: index.php");
+    exit();
 } else {
-  echo "<script>alert('Error al registrar: " . $conexion->error . "'); window.history.back();</script>";
+    echo "Error al registrar: " . $mysqli->error;
 }
 
-$stmt->close();
-$conexion->close();
+
 
 ?>

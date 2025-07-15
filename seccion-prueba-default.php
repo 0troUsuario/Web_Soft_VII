@@ -97,7 +97,7 @@ if ($fila = $resultado->fetch_assoc()) {
 
       <div class="leche">
         <h2 class="nombre-articulo"><?php echo htmlspecialchars($fila['nombre']); ?></h2>
-        <h2 class="Autor-articulo"><strong>Publicado por:</strong> Dall-E</h2>
+        <h2 class="Autor-articulo"><strong>Publicado por:</strong> <?php echo htmlspecialchars($fila['autor'] ?? 'Anónimo'); ?></h2>
         <h2 class="precio">$<?php echo htmlspecialchars($fila['precio']); ?></h2>
         <p class="descripcion-articulo"><?php echo nl2br(htmlspecialchars($fila['descripcion'])); ?></p>
         <ul class="caracteristicas-articulo">

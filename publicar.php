@@ -1,4 +1,14 @@
 <?php
+session_start();
+if (!isset($_SESSION['usuario_id'])) {
+    header("Location: index.php");
+    exit();
+}
+$autor = $_SESSION['usuario_nombre'];
+?>
+
+
+<?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
 
     $mysqli = new mysqli('localhost', 'root', '', 'dalle');
@@ -33,8 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     }
 
     // Inserta el producto en la base de datos, claro que sí  
-    $sql = "INSERT INTO productos (nombre, precio, descripcion, imagen, material, dimension, unidad_dimension, peso, unidad_peso, color)
-            VALUES ('$nombre', $precio, '$descripcion', '$rutaDestino', '$material', '$dimension', '$unidad_dimension', $peso, '$unidad_peso', '$color')";
+$sql = "INSERT INTO productos (nombre, precio, descripcion, imagen, material, dimension, unidad_dimension, peso, unidad_peso, color, autor)
+        VALUES ('$nombre', $precio, '$descripcion', '$rutaDestino', '$material', '$dimension', '$unidad_dimension', $peso, '$unidad_peso', '$color', '$autor')";
 
     if ($mysqli->query($sql)) {
         // Redirige a inicio.php al terminar
