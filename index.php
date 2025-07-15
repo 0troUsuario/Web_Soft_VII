@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (isset($_SESSION['error'])) {
+    echo '<div style="color: red; text-align: center; margin-bottom: 10px;">' . $_SESSION['error'] . '</div>';
+    unset($_SESSION['error']); 
+}
 ?>
 
 <!DOCTYPE html>
@@ -214,7 +218,7 @@ session_start();
 
   <div class="login-container">
     
-    <a href="loading.html?next=inicio.php" class="back-button" title="Regresar">
+    <a href="loading.html?next=index.php" class="back-button" title="Regresar">
       <i class="fas fa-chevron-left"></i>
     </a>
 

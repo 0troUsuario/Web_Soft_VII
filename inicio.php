@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: index.php");
+    exit;
+}
 include 'conexion.php';
 
 $sql = "SELECT * FROM productos ORDER BY fecha_publicacion DESC";

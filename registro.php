@@ -227,11 +227,11 @@
 </head>
 <body>
   <div class="register-container">
-    <a href="inicio.php" class="back-button"><i class="fas fa-chevron-left"></i></a>
+    <a href="index.php" class="back-button"><i class="fas fa-chevron-left"></i></a>
     <h2>Crear Cuenta</h2>
     <form method="POST" action="procesar_registro.php" onsubmit="return validarFormulario()"> 
-      <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
-      <input type="text" id="apellido" name="apellido" placeholder="Apellido" required />
+      <input type="text" id="username" name="username" placeholder="Usuario" required />
+      <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required />
       <input type="date" id="fecha" name="fecha" required />
       <input type="text" id="cedula" name="cedula" placeholder="Cédula (ej: 8-888-8888)" required />
       <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required />
