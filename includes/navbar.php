@@ -1,5 +1,8 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 $conexion = new mysqli('localhost', 'root', '', 'dalle');
 if ($conexion->connect_error) {
   die("Error de conexión: " . $conexion->connect_error);
