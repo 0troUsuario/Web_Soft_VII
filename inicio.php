@@ -132,7 +132,7 @@ $resultado = $conexion->query($sql);
   <div class="seccion-cuadro-grande">
     <div class="cuadro-grande">
       <figure class="destacada">
-        <img src="img/noche.jpg" alt="Noche" class="imagen-destacada" />
+        <img src="img/busto.jpeg" alt="Noche" class="imagen-destacada" />
       </figure>
       <div class="rectangulo-superpuesto">
         <span>Artículo destacado</span>
@@ -147,93 +147,7 @@ $resultado = $conexion->query($sql);
 
 
   <div class="contenedor-principal">
-    <div class="cuadro">
-      <figure>
-        <img src="img/la-banana.jpeg" alt="la-banana" class="imagen-el-david" />
-      </figure>
-      <div class="info-producto">
-        <h2>La Banana</h2>
-        <p class="price">25$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-tres.php';">Ver más</button>
-      </div>
-    </div>
-
-    <div class="cuadro">
-      <figure>
-        <img src="img/Pensador.jpeg" alt="Pensador" class="imagen-el-david" />
-      </figure>
-      <div class="info-producto">
-        <h2>El Pensador</h2>
-        <p class="price">100$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-cuatro.php';">Ver más</button>
-      </div>
-    </div>
-
-    <div class="cuadro">
-      <figure>
-        <img src="img/busto.jpeg" alt="busto-El-David" class="imagen-el-david" />
-      </figure>
-      <div class="info-producto">
-        <h2>El David (Estatua)</h2>
-        <p class="price">550$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba.php';">Ver más</button>
-      </div>
-    </div>
-
-    <div class="cuadro">
-      <figure>
-        <img src="img/noche-estrellada.jpg" alt="busto-El-David" class="imagen-el-david" />
-      </figure>
-      <div class="info-producto">
-        <h2>Noche Estrellada</h2>
-        <p class="price">80$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-dos.php';">Ver más</button>
-      </div>
-    </div>
-
-    <div class="cuadro">
-      <figure>
-        <img src="img/vigilantes.jpg" alt="vigilantes" class="imagen-el-david" />
-      </figure>
-      <div class="info-producto">
-        <h2>Vigilantes</h2>
-        <p class="price">10$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-cinco.php';">Ver más</button>
-      </div>
-    </div>
-
-    <div class="cuadro">
-      <figure>
-        <img src="img/valle-de-los-lamentos.jpg" alt="vigilantes" class="imagen-el-david" />
-      </figure>
-      <div class="info-producto">
-        <h2>Valle de los Lamentos</h2>
-        <p class="price">15$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-seis.php';">Ver más</button>
-      </div>
-    </div>
-
-    <div class="cuadro">
-      <figure>
-        <img src="img/guernica.jpg" alt="guernica" class="imagen-el-david" />
-      </figure>
-      <div class="info-producto">
-        <h2>Guernica</h2>
-        <p class="price">38$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-siete.php';">Ver más</button>
-      </div>
-    </div>
-
-    <div class="cuadro">
-      <figure>
-        <img src="img/paisaje-lienzo.jpg" alt="paisajeBN" class="imagen-el-david" />
-      </figure>
-      <div class="info-producto">
-        <h2>El Mirar</h2>
-        <p class="price">18$</p>
-        <button class="btn-ver-mas" onclick="location.href='seccion-prueba-ocho.php';">Ver más</button>
-      </div>
-    </div>
+    
 
   
     <?php
