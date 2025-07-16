@@ -705,3 +705,20 @@ button:hover {
   background: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+#contador-carrito {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}

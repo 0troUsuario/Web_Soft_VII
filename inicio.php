@@ -216,5 +216,175 @@ $resultado = $conexion->query($sql);
 
   <?php $conexion->close(); ?>
 
+  <?php
+$paginaActual = basename($_SERVER['PHP_SELF']);
+if (!in_array($paginaActual, ['index.php', 'registro.php'])):
+?>
+<style>
+  #boton-carrito {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  #boton-carrito i {
+    font-size: 24px;
+    color: black;
+  }
+
+  #menu-carrito {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background: white;
+    border: 1px solid black;
+    padding: 20px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .carrito-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .carrito-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  .carrito-item p {
+    margin: 0;
+    font-size: 14px;
+    flex: 1;
+  }
+
+  .carrito-item button {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+  }
+
+  #menu-carrito .total {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: right;
+  }
+
+  #menu-carrito .boton-comprar {
+    margin-top: 15px;
+    background-color: #000000ff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    float: right;
+  }
+</style>
+
+<div id="boton-carrito">
+  <i class="fas fa-shopping-cart"></i>
+  <div id="contador-carrito">0</div>
+</div>
+
+
+<div id="menu-carrito">
+  <div id="contenido-carrito"></div>
+  <div class="total" id="total-carrito"></div>
+  <button class="boton-comprar" onclick="realizarCompra()">Comprar</button>
+</div>
+
+<script>
+  const botonCarrito = document.getElementById('boton-carrito');
+  const menuCarrito = document.getElementById('menu-carrito');
+
+  botonCarrito.addEventListener('click', () => {
+    menuCarrito.style.display = menuCarrito.style.display === 'block' ? 'none' : 'block';
+    cargarCarrito();
+  });
+
+  function cargarCarrito() {
+    fetch('mostrar-carrito.php')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('contenido-carrito').innerHTML = html;
+        calcularTotal();
+        actualizarContador(); 
+      });
+  }
+
+  function actualizarContador() {
+    fetch('contar-carrito.php')
+      .then(response => response.json())
+      .then(data => {
+        const contador = document.getElementById('contador-carrito');
+        const cantidad = data.total;
+
+        if (cantidad > 0) {
+          contador.style.display = 'flex';
+          contador.innerText = cantidad > 9 ? '+9' : cantidad;
+        } else {
+          contador.style.display = 'none';
+        }
+      });
+  }
+
+  function calcularTotal() {
+    fetch('calcular-total.php')
+      .then(response => response.text())
+      .then(total => {
+        document.getElementById('total-carrito').innerText = 'Total: $' + total;
+      });
+  }
+
+  function eliminarProducto(id) {
+    fetch('eliminar-del-carrito.php?id=' + id)
+      .then(() => cargarCarrito());
+  }
+
+function realizarCompra() {
+  if (confirm('¿Deseas finalizar tu compra?')) {
+    fetch('comprar-productos.php')
+      .then(response => response.text())
+      .then(data => {
+        alert('Gracias por tu compra!');
+        cargarCarrito();      
+        actualizarContador(); 
+        window.location.href = 'inicio.php'; 
+      });
+  }
+}
+
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    actualizarContador();
+  });
+</script>
+
+
+<?php endif; ?>
+
+
 </body>
 </html>
