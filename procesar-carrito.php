@@ -1,26 +1,20 @@
 <?php
 session_start();
 
-$id = $_POST['id'];
-$nombre = $_POST['nombre'];
-$precio = $_POST['precio'];
-$imagen = $_POST['imagen'];
+require 'carrito-funciones.php';
 
-if (!isset($_SESSION['carrito'])) {
-    $_SESSION['carrito'] = [];
-}
-
-
-if (!isset($_SESSION['carrito'][$id])) {
-    $_SESSION['carrito'][$id] = [
-        'nombre' => $nombre,
-        'precio' => $precio,
-        'imagen' => $imagen,
-        'cantidad' => 1
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $producto = [
+        'id' => isset($_POST['id']) ? intval($_POST['id']) : null,
+        'nombre' => $_POST['nombre'] ?? '',
+        'precio' => isset($_POST['precio']) ? floatval($_POST['precio']) : 0,
+        'imagen' => $_POST['imagen'] ?? ''
     ];
+
+    agregarAlCarrito($producto);
 }
 
 
 
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+header("Location: " . $_SERVER['HTTP_REFERER']);
 exit;

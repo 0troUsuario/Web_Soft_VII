@@ -136,7 +136,7 @@ try {
     $mail->Port = 587;
 
     // Remitente y destinatario
-    $mail->setFrom('tuemail@gmail.com', 'Tu Tienda');
+    $mail->setFrom('dallesoporte@gmail.com', 'Dall-e');
     $mail->addAddress($correo, $nombreCompleto);
 
     // Contenido
