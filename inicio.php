@@ -364,16 +364,42 @@ if (!in_array($paginaActual, ['index.php', 'registro.php'])):
 
 function realizarCompra() {
   if (confirm('¿Deseas finalizar tu compra?')) {
-    fetch('comprar-productos.php')
-      .then(response => response.text())
-      .then(data => {
-        alert('Gracias por tu compra!');
-        cargarCarrito();      
-        actualizarContador(); 
-        window.location.href = 'inicio.php'; 
+    fetch('generar-factura.php')
+      .then(async (response) => {
+        console.log('Status HTTP:', response.status);
+        const text = await response.text(); // primero lee como texto
+
+        try {
+          const data = JSON.parse(text); // intenta parsear como JSON
+          console.log('Respuesta JSON:', data);
+
+          if (response.ok) {
+            if (data.success) {
+              alert(data.message);
+              cargarCarrito();
+              actualizarContador();
+              window.location.href = 'inicio.php';
+            } else if (data.error) {
+              alert('Error: ' + data.error);
+            } else {
+              alert('Respuesta inesperada');
+            }
+          } else {
+            alert('Error HTTP: ' + response.status + ' - ' + (data.error || ''));
+          }
+        } catch (e) {
+          console.error('No es JSON válido:', text);
+          alert('Respuesta inválida del servidor');
+        }
+      })
+      .catch(error => {
+        console.error('Error en fetch:', error);
+        alert('Error en la comunicación con el servidor: ' + error.message);
       });
   }
 }
+
+
 
 
 
